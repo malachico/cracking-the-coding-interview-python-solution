@@ -61,7 +61,7 @@ def is_a_rotation(s1, s2):
 
 
 # tests
-class MyTest(unittest.TestCase):
+class ArraysAndStringsTest(unittest.TestCase):
     def test1(self):
         self.assertTrue(all_unique("abc"))
         self.assertFalse(all_unique("abcc"))

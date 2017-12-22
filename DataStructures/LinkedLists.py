@@ -99,7 +99,7 @@ def is_circular(lst):
             return False
 
 # tests
-class MyTest(unittest.TestCase):
+class LinkedListTest(unittest.TestCase):
     def test1(self):
         lst = LinkedList(1, 2, 3, 3, 4)
 
@@ -133,14 +133,14 @@ class MyTest(unittest.TestCase):
 
         ans = add_lists(lst1, lst2)
 
-        ans.to_string()
-
         self.assertEqual(ans, required)
 
 
     def test5(self):
         lst = LinkedList(1,2,3,4,5)
+
         n = lst.get_node(3)
+
         lst.get_node(5).next = n
 
         self.assertEqual(is_circular(lst), True)
