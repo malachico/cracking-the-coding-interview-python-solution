@@ -5,9 +5,23 @@ from Utils.ArrayStacks import ArrayStacks
 
 # tests
 from Utils.MinStack import MinStack
+from Utils.PileStacks import PileStacks
+from Utils.Stack import Stack
 
 
 class StacksAndQueuesTest(unittest.TestCase):
+    def test0(self):
+        stack = Stack()
+        stack.push(1)
+        self.assertEqual(stack.size(), 1)
+        stack.push(2)
+        stack.push(2)
+        stack.push(2)
+        stack.push(2)
+        self.assertEqual(stack.size(), 5)
+        stack.pop()
+        self.assertEqual(stack.size(), 4)
+
     def test1(self):
         stacks = ArrayStacks()
 
@@ -28,3 +42,21 @@ class StacksAndQueuesTest(unittest.TestCase):
         minStack.push(1)
         minStack.push(2)
         print minStack.get_min()
+
+
+    def test3(self):
+        pileStacks = PileStacks()
+
+        pileStacks.push(1)
+        pileStacks.push(3)
+
+        self.assertEqual(pileStacks.pop(), 3)
+
+        pileStacks.push(2)
+        pileStacks.push(3)
+
+        pileStacks.push(4)
+
+        self.assertEqual(len(pileStacks.arr), 2)
+        self.assertEqual(pileStacks.pop(), 4)
+        self.assertEqual(len(pileStacks.arr), 1)

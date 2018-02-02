@@ -22,3 +22,17 @@ class Stack:
         self.top = data.next
         return data
 
+    def size(self):
+        temp_stack = Stack()
+        count = 0
+        while self.top:
+            temp_stack.push(self.pop())
+            count+=1
+
+        while temp_stack.top:
+            self.push(temp_stack.pop())
+
+        return count
+
+    def isEmpty(self):
+        return self.top == None
