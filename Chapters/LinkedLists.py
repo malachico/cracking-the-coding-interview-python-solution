@@ -1,6 +1,6 @@
 import unittest
 
-from Utils.LinkedList import LinkedList
+from DataStructures.LinkedList import LinkedList
 
 
 # Question 1

@@ -1,4 +1,4 @@
-from Utils.Stack import Stack
+from DataStructures.Stack import Stack
 MAX_SIZE = 3
 
 class PileStacks:

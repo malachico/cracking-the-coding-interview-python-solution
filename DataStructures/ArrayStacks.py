@@ -1,6 +1,6 @@
 from array import array
 
-from Utils.StackNode import StackNode
+from DataStructures.StackNode import StackNode
 
 ARRAY_SIZE = 30
 

@@ -1,12 +1,12 @@
 import unittest
 
-from Utils.ArrayStacks import ArrayStacks
+from DataStructures.ArrayStacks import ArrayStacks
 
 
 # tests
-from Utils.MinStack import MinStack
-from Utils.PileStacks import PileStacks
-from Utils.Stack import Stack
+from DataStructures.MinStack import MinStack
+from DataStructures.PileStacks import PileStacks
+from DataStructures.Stack import Stack
 
 
 class StacksAndQueuesTest(unittest.TestCase):
@@ -60,3 +60,5 @@ class StacksAndQueuesTest(unittest.TestCase):
         self.assertEqual(len(pileStacks.arr), 2)
         self.assertEqual(pileStacks.pop(), 4)
         self.assertEqual(len(pileStacks.arr), 1)
+
+
